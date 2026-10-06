@@ -1,0 +1,26 @@
+name: Daily Auto Commit
+
+on:
+  schedule:
+    # Rozana raat 12:00 UTC pr chalega (PKT k mutabiq subah 5:00 AM)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Is se tum button daba kr manually b test kr skty ho
+
+jobs:
+  update-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Update Timestamp File
+        run: |
+          echo "Last active: $(date -u)" > log.txt
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "Your Name"
+          git config --global user.email "your-github-email@example.com"
+          git add log.txt
+          git commit -m "chore: automated daily activity" || exit 0
+          git push
