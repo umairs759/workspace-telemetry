@@ -1,26 +1,31 @@
-name: Daily Auto Commit
+name: Endpoint Pulse
 
 on:
   schedule:
     # Rozana raat 12:00 UTC pr chalega (PKT k mutabiq subah 5:00 AM)
     - cron: '0 0 * * *'
-  workflow_dispatch: # Is se tum button daba kr manually b test kr skty ho
+  workflow_dispatch: # Manual test button
+
+permissions:
+  contents: write
 
 jobs:
-  update-repo:
+  telemetry-sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Update Timestamp File
+      - name: Update Telemetry State
         run: |
-          echo "Last active: $(date -u)" > log.txt
+          mkdir -p telemetry
+          echo "{\"status\": \"healthy\", \"last_sync\": \"$(date -u +'%Y-%m-%dT%H:%M:%SZ')\", \"node\": \"endpoint-pulse-01\"}" > telemetry/heartbeat.json
 
       - name: Commit and Push
         run: |
-          git config --global user.name "Your Name"
-          git config --global user.email "your-github-email@example.com"
-          git add log.txt
-          git commit -m "chore: automated daily activity" || exit 0
+          git config --global user.name "umairs759"
+          git config --global user.email "umairghaffar759@gmail.com"
+          git add telemetry/heartbeat.json
+          git commit -m "telemetry: sync daily heartbeat state" || exit 0
+          git pull --rebase origin main
           git push
