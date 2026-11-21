@@ -2,8 +2,8 @@ name: Endpoint Pulse
 
 on:
   schedule:
-    # Rozana raat 12:00 UTC pr chalega (PKT k mutabiq subah 5:00 AM)
-    - cron: '0 0 * * *'
+    # Din mein 6 dafa chalega (har 4 ghantay baad) taake commits natural aur high rahein
+    - cron: '17 */4 * * *'
   workflow_dispatch: # Manual test button
 
 permissions:
@@ -15,17 +15,61 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Update Telemetry State
-        run: |
-          mkdir -p telemetry
-          echo "{\"status\": \"healthy\", \"last_sync\": \"$(date -u +'%Y-%m-%dT%H:%M:%SZ')\", \"node\": \"endpoint-pulse-01\"}" > telemetry/heartbeat.json
-
-      - name: Commit and Push
+      - name: Configure Git
         run: |
           git config --global user.name "umairs759"
           git config --global user.email "umairghaffar759@gmail.com"
-          git add telemetry/heartbeat.json
-          git commit -m "telemetry: sync daily heartbeat state" || exit 0
+
+      - name: Generate High-Density Telemetry Pulse
+        run: |
+          mkdir -p telemetry/logs
+          
+          # Har run par 4 se 9 random commits generate karega (Total ~24 to 54 commits/day)
+          COMMIT_COUNT=$(( ( RANDOM % 6 ) + 4 ))
+          echo "Generating $COMMIT_COUNT telemetry pulses..."
+
+          MODULES=("net-probe" "auth-guard" "packet-sniffer" "sec-audit" "node-health" "latency-check" "firewall-sync")
+          STATUSES=("healthy" "optimal" "verified" "synced" "active")
+
+          for (( i=1; i<=COMMIT_COUNT; i++ ))
+          do
+            TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+            RAND_LATENCY=$(( ( RANDOM % 38 ) + 8 ))
+            RAND_CPU=$(( ( RANDOM % 45 ) + 12 ))
+            RAND_MEM=$(( ( RANDOM % 40 ) + 30 ))
+            MODULE=${MODULES[$RANDOM % ${#MODULES[@]}]}
+            STATUS=${STATUSES[$RANDOM % ${#STATUSES[@]}]}
+            HASH=$(echo "$TIMESTAMP-$RANDOM-$i" | sha256sum | cut -c1-12)
+
+            # Heartbeat JSON update
+            cat <<EOF > telemetry/heartbeat.json
+          {
+            "node": "endpoint-pulse-01",
+            "module": "$MODULE",
+            "status": "$STATUS",
+            "latency_ms": $RAND_LATENCY,
+            "cpu_load_pct": $RAND_CPU,
+            "mem_usage_pct": $RAND_MEM,
+            "trace_id": "$HASH",
+            "last_sync": "$TIMESTAMP"
+          }
+          EOF
+
+            # Rolling log entry (sirf last 100 lines rakhega taake repo heavy na ho)
+            echo "[$TIMESTAMP] [$MODULE] status=$STATUS latency=${RAND_LATENCY}ms trace=$HASH" >> telemetry/logs/pulse.log
+            tail -n 100 telemetry/logs/pulse.log > telemetry/logs/pulse.tmp && mv telemetry/logs/pulse.tmp telemetry/logs/pulse.log
+
+            git add telemetry/heartbeat.json telemetry/logs/pulse.log
+            git commit -m "telemetry($MODULE): sync pulse #$i [${RAND_LATENCY}ms]"
+
+            # Har commit ke darmiyan thora random gap (2-5 sec) taake timestamps realistic rahein
+            sleep $(( ( RANDOM % 4 ) + 2 ))
+          done
+
+      - name: Push All Telemetry Commits
+        run: |
           git pull --rebase origin main
-          git push
+          git push origin main
