@@ -1,1 +1,10 @@
-{"status": "healthy", "last_sync": "2026-11-21T05:11:52Z", "node": "endpoint-pulse-01"}
+{
+  "node": "endpoint-pulse-01",
+  "module": "latency-check",
+  "status": "optimal",
+  "latency_ms": 30,
+  "cpu_load_pct": 36,
+  "mem_usage_pct": 52,
+  "trace_id": "a24533e9a51c",
+  "last_sync": "2026-11-22T00:19:11Z"
+}
