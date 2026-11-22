@@ -12,3 +12,4 @@
 [2026-11-22T12:33:24Z] [node-health] status=synced latency=14ms trace=2f1c301cca57
 [2026-11-22T12:33:26Z] [net-probe] status=verified latency=13ms trace=8adbc16319c8
 [2026-11-22T12:33:28Z] [net-probe] status=healthy latency=38ms trace=d64dfee071d8
+[2026-11-22T12:33:31Z] [firewall-sync] status=active latency=14ms trace=8d4a8275e86e
