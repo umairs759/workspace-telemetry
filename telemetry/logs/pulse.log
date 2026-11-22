@@ -17,3 +17,4 @@
 [2026-11-22T21:45:00Z] [auth-guard] status=active latency=14ms trace=b05206c5dab6
 [2026-11-22T21:45:05Z] [latency-check] status=optimal latency=15ms trace=c9e37ea0204e
 [2026-11-22T21:45:07Z] [net-probe] status=healthy latency=10ms trace=2a4ae906b4b4
+[2026-11-22T21:45:12Z] [packet-sniffer] status=optimal latency=28ms trace=3dfa115b7e8a
