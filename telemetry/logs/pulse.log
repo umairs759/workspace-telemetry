@@ -23,3 +23,4 @@
 [2026-11-22T21:45:22Z] [auth-guard] status=healthy latency=29ms trace=45c47e211431
 [2026-11-23T07:31:52Z] [packet-sniffer] status=healthy latency=8ms trace=cfad7404fd1d
 [2026-11-23T07:31:54Z] [packet-sniffer] status=synced latency=20ms trace=5a18185c7604
+[2026-11-23T07:31:56Z] [firewall-sync] status=optimal latency=30ms trace=09fc8f741e3d
