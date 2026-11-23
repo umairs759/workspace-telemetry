@@ -28,3 +28,4 @@
 [2026-11-23T07:32:04Z] [auth-guard] status=healthy latency=42ms trace=385b26d172a2
 [2026-11-23T20:10:58Z] [auth-guard] status=active latency=45ms trace=495098663069
 [2026-11-23T20:11:03Z] [auth-guard] status=optimal latency=35ms trace=18b8706d51ba
+[2026-11-23T20:11:06Z] [firewall-sync] status=healthy latency=27ms trace=dd55348e2456
