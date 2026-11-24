@@ -2,9 +2,9 @@
   "node": "endpoint-pulse-01",
   "module": "latency-check",
   "status": "verified",
-  "latency_ms": 44,
-  "cpu_load_pct": 51,
-  "mem_usage_pct": 51,
-  "trace_id": "2386caada88a",
-  "last_sync": "2026-11-24T04:46:20Z"
+  "latency_ms": 19,
+  "cpu_load_pct": 24,
+  "mem_usage_pct": 45,
+  "trace_id": "2ec7ce4cabd2",
+  "last_sync": "2026-11-24T19:29:25Z"
 }
