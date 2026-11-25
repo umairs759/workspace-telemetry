@@ -49,3 +49,4 @@
 [2026-11-24T19:29:33Z] [latency-check] status=synced latency=23ms trace=b3596477a94f
 [2026-11-24T19:29:38Z] [latency-check] status=verified latency=34ms trace=ac65338cb12a
 [2026-11-25T03:32:02Z] [latency-check] status=healthy latency=43ms trace=a3514d32aec7
+[2026-11-25T03:32:04Z] [latency-check] status=active latency=26ms trace=1a58e7a6af80
