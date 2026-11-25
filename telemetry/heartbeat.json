@@ -1,10 +1,10 @@
 {
   "node": "endpoint-pulse-01",
-  "module": "sec-audit",
-  "status": "synced",
-  "latency_ms": 43,
-  "cpu_load_pct": 28,
-  "mem_usage_pct": 65,
-  "trace_id": "c4dce5f531c0",
-  "last_sync": "2026-11-25T03:32:18Z"
+  "module": "net-probe",
+  "status": "optimal",
+  "latency_ms": 28,
+  "cpu_load_pct": 17,
+  "mem_usage_pct": 35,
+  "trace_id": "a40af2516250",
+  "last_sync": "2026-11-25T03:32:23Z"
 }
