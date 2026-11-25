@@ -60,3 +60,4 @@
 [2026-11-25T14:17:04Z] [firewall-sync] status=healthy latency=15ms trace=a8ee44e0dee1
 [2026-11-25T14:17:09Z] [packet-sniffer] status=synced latency=15ms trace=a0e9776b08dc
 [2026-11-25T14:17:13Z] [firewall-sync] status=active latency=18ms trace=06a8b1f1cf21
+[2026-11-25T14:17:17Z] [firewall-sync] status=healthy latency=44ms trace=6bb7cd564b4f
