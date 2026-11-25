@@ -57,3 +57,4 @@
 [2026-11-25T03:32:27Z] [packet-sniffer] status=synced latency=37ms trace=2ad09a81aab7
 [2026-11-25T03:32:30Z] [firewall-sync] status=synced latency=18ms trace=6d2ab4edf474
 [2026-11-25T03:32:35Z] [node-health] status=active latency=28ms trace=e518c1cfc3c1
+[2026-11-25T14:17:04Z] [firewall-sync] status=healthy latency=15ms trace=a8ee44e0dee1
