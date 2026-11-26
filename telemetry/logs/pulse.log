@@ -70,3 +70,4 @@
 [2026-11-26T13:52:14Z] [node-health] status=optimal latency=40ms trace=30887c4884d0
 [2026-11-26T13:52:16Z] [auth-guard] status=synced latency=18ms trace=ae67a3fe1ac3
 [2026-11-26T13:52:20Z] [packet-sniffer] status=healthy latency=35ms trace=5c02683479d1
+[2026-11-26T13:52:25Z] [packet-sniffer] status=synced latency=12ms trace=c44e44a26688
