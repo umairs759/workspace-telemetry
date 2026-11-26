@@ -1,10 +1,10 @@
 {
   "node": "endpoint-pulse-01",
-  "module": "node-health",
-  "status": "optimal",
-  "latency_ms": 40,
-  "cpu_load_pct": 26,
-  "mem_usage_pct": 42,
-  "trace_id": "30887c4884d0",
-  "last_sync": "2026-11-26T13:52:14Z"
+  "module": "auth-guard",
+  "status": "synced",
+  "latency_ms": 18,
+  "cpu_load_pct": 23,
+  "mem_usage_pct": 66,
+  "trace_id": "ae67a3fe1ac3",
+  "last_sync": "2026-11-26T13:52:16Z"
 }
