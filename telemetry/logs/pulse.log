@@ -72,3 +72,4 @@
 [2026-11-26T13:52:20Z] [packet-sniffer] status=healthy latency=35ms trace=5c02683479d1
 [2026-11-26T13:52:25Z] [packet-sniffer] status=synced latency=12ms trace=c44e44a26688
 [2026-11-26T13:52:27Z] [latency-check] status=optimal latency=35ms trace=9387481b329e
+[2026-11-26T13:52:31Z] [firewall-sync] status=healthy latency=29ms trace=bad0ffaf9f85
