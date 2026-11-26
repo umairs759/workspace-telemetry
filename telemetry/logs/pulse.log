@@ -65,3 +65,4 @@
 [2026-11-26T00:18:31Z] [firewall-sync] status=optimal latency=39ms trace=3d372d48bf61
 [2026-11-26T00:18:33Z] [auth-guard] status=optimal latency=33ms trace=30c185250291
 [2026-11-26T00:18:37Z] [latency-check] status=healthy latency=31ms trace=d3c969b6d7be
+[2026-11-26T00:18:40Z] [net-probe] status=active latency=40ms trace=b66a1b34a522
