@@ -79,3 +79,4 @@
 [2026-11-27T00:34:05Z] [latency-check] status=active latency=12ms trace=5de4502ea914
 [2026-11-27T13:49:44Z] [sec-audit] status=verified latency=36ms trace=fd912a466aa2
 [2026-11-27T13:49:46Z] [sec-audit] status=verified latency=43ms trace=02501fdb4f91
+[2026-11-27T13:49:49Z] [packet-sniffer] status=healthy latency=22ms trace=b3d2ed078893
