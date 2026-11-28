@@ -83,3 +83,4 @@
 [2026-11-27T13:49:53Z] [firewall-sync] status=verified latency=38ms trace=7c40a768cf3d
 [2026-11-27T13:49:55Z] [latency-check] status=healthy latency=14ms trace=25faeb399bf0
 [2026-11-27T13:49:58Z] [packet-sniffer] status=synced latency=34ms trace=fdf4f022d9a7
+[2026-11-28T00:01:43Z] [net-probe] status=optimal latency=16ms trace=c702efbdaf01
