@@ -1,10 +1,10 @@
 {
   "node": "endpoint-pulse-01",
-  "module": "firewall-sync",
-  "status": "healthy",
-  "latency_ms": 41,
-  "cpu_load_pct": 32,
-  "mem_usage_pct": 61,
-  "trace_id": "630685d3389e",
-  "last_sync": "2026-11-28T07:43:03Z"
+  "module": "net-probe",
+  "status": "synced",
+  "latency_ms": 23,
+  "cpu_load_pct": 18,
+  "mem_usage_pct": 39,
+  "trace_id": "6e878fb0193b",
+  "last_sync": "2026-11-28T07:43:07Z"
 }

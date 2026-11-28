@@ -93,3 +93,4 @@
 [2026-11-28T00:02:07Z] [auth-guard] status=synced latency=25ms trace=9c1757828f7e
 [2026-11-28T07:42:58Z] [firewall-sync] status=verified latency=29ms trace=bb7147085125
 [2026-11-28T07:43:03Z] [firewall-sync] status=healthy latency=41ms trace=630685d3389e
+[2026-11-28T07:43:07Z] [net-probe] status=synced latency=23ms trace=6e878fb0193b
